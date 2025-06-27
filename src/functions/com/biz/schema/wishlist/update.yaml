@@ -1,0 +1,8 @@
+summary: Update WishList
+tasks:
+  - id: schema_wishlist_update
+    fn: datasource.schema.WishList.update
+    args:
+      where:
+        id: <% parseInt(inputs.params.id) %>
+      data: <% inputs.body %>

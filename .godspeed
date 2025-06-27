@@ -1,0 +1,22 @@
+{
+  "mongodb": {
+    "mode": "single",
+    "dbName": "godspeed",
+    "ports": [
+      27017
+    ]
+  },
+  "postgresql": false,
+  "kafka": false,
+  "elasticsearch": false,
+  "redis": false,
+  "servicePort": 3000,
+  "gsNodeServiceVersion": "latest",
+  "projectName": "stock-exchange-v2",
+  "meta": {
+    "createTimestamp": "2025-06-27T10:31:31.473Z",
+    "lastUpdateTimestamp": "2025-06-27T10:31:31.473Z",
+    "cliVersionWhileCreation": "2.9.4",
+    "cliVersionWhileLastUpdate": "2.9.4"
+  }
+}

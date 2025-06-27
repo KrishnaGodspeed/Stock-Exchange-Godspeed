@@ -1,0 +1,17 @@
+# SEARCH
+http.post./schema/wishlist/search:
+  summary: Fetch multiple WishList
+  description: Fetch multiple WishList from database
+  fn: com.biz.schema.wishlist.search
+  body:
+    content:
+      application/json:
+        schema:
+          type: object
+  responses:
+    '200':
+      content:
+        application/json:
+          schema:
+            type: array
+

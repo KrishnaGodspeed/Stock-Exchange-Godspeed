@@ -1,0 +1,44 @@
+User:
+  type: object
+  properties:
+    createdAt:
+      type: string
+      format: date-time
+    email:
+      type: string
+    name:
+      type: string
+      nullable: true
+    password:
+      type: string
+Intraday:
+  type: object
+  properties:
+    function:
+      type: string
+    symbol:
+      type: string
+    interval:
+      type: string
+    adjusted:
+      type: string
+      nullable: true
+    extended_hours:
+      type: string
+      nullable: true
+    month:
+      type: string
+      nullable: true
+    outputsize:
+      type: string
+      nullable: true
+    datatype:
+      type: string
+      nullable: true
+WishList:
+  type: object
+  properties:
+    UserId:
+      type: integer
+    optionsId:
+      type: integer

@@ -1,0 +1,7 @@
+summary: Fetch Intraday
+tasks:
+  - id: schema_intraday_one
+    fn: datasource.schema.Intraday.findUnique
+    args:
+      where:
+        id: <% parseInt(inputs.params.id) %>

@@ -1,0 +1,5 @@
+summary: Fetch many Intraday
+tasks:
+  - id: schema_intraday_search
+    fn: datasource.schema.Intraday.findMany
+    args: {}

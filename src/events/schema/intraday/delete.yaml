@@ -1,0 +1,18 @@
+# DELETE
+http.delete./schema/intraday/{id}:
+  summary: Delete a Intraday
+  description: Delete Intraday from database
+  fn: com.biz.schema.intraday.delete
+  params:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: string
+  responses:
+    '202':
+      content:
+        application/json:
+          schema:
+            type: object
+

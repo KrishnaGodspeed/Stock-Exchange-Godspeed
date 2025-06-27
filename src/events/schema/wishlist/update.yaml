@@ -1,0 +1,23 @@
+# UPDATE
+http.put./schema/wishlist/{id}:
+  summary: Update a WishList
+  description: Update WishList from database
+  fn: com.biz.schema.wishlist.update
+  body:
+    content:
+      application/json:
+        schema:
+          $ref: '#/definitions/schema/WishList'
+  params:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: string
+  responses:
+    '204':
+      content:
+        application/json:
+          schema:
+            type: object
+

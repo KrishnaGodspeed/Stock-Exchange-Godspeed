@@ -1,0 +1,17 @@
+# CREATE
+http.post./schema/intraday:
+  summary: Create a new Intraday
+  description: Create Intraday from database
+  fn: com.biz.schema.intraday.create
+  body:
+    content:
+      application/json:
+        schema:
+          $ref: '#/definitions/schema/Intraday'
+  responses:
+    '201':
+      content:
+        application/json:
+          schema:
+            type: object
+

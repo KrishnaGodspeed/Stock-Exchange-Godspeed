@@ -1,0 +1,23 @@
+# UPDATE
+http.put./schema/intraday/{id}:
+  summary: Update a Intraday
+  description: Update Intraday from database
+  fn: com.biz.schema.intraday.update
+  body:
+    content:
+      application/json:
+        schema:
+          $ref: '#/definitions/schema/Intraday'
+  params:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: string
+  responses:
+    '204':
+      content:
+        application/json:
+          schema:
+            type: object
+
