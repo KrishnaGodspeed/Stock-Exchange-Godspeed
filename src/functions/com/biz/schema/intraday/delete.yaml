@@ -1,7 +1,0 @@
-summary: Delete Intraday
-tasks:
-  - id: schema_intraday_delete
-    fn: datasource.schema.Intraday.delete
-    args:
-      where:
-        id: <% parseInt(inputs.params.id) %>

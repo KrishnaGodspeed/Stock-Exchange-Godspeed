@@ -18,23 +18,35 @@ model User {
   wish      WishList[]
 }
 
-model Intraday {
-  id             Int        @id @default(autoincrement())
-  function       String
-  symbol         String     @unique
-  interval       String
-  adjusted       String?
-  extended_hours String?
-  month          String?
-  outputsize     String?
-  datatype       String?
-  wishLists      WishList[] @relation("WishListToIntraday")
+model WishList {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  name      String
+  userId    Int
+  options   Json // Store the API options as JSON object
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, name]) // Ensure unique wishlist item names per user
 }
 
-model WishList {
-  id        Int        @id @default(autoincrement())
-  User      User       @relation(fields: [UserId], references: [id])
-  UserId    Int        @unique
-  optionsId Int        @unique
-  options   Intraday[] @relation("WishListToIntraday")
-}
+// model WishList {
+//     id              Int         @id @default(autoincrement())
+//     User            User        @relation(fields: [UserId], references:[id])
+//     UserId          Int         @unique
+//     optionsId       Int         @unique
+//     options         Intraday[]  @relation("WishListToIntraday")
+//
+// }
+
+// model Intraday {
+//     id              Int     @id @default(autoincrement())
+//     function        String   
+//     symbol          String  
+//     interval        String
+//     adjusted        String?
+//     extended_hours  String?
+//     month           String? 
+//     outputsize      String?
+//     datatype        String?
+//     wishLists  WishList[] @relation("WishListToIntraday")
+// }

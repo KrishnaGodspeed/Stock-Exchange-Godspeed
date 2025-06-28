@@ -1,0 +1,32 @@
+http.delete./wishlist/{name}:
+  fn: wishlist.delete
+  authn: true
+  params:
+    - name: name
+      description: Name of the wishlist item to delete
+      in: path
+      required: true
+      schema:
+        type: string
+
+  responses:
+    200:
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              success:
+                type: boolean
+              message:
+                type: string
+    404:
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              success:
+                type: boolean
+              message:
+                type: string

@@ -1,0 +1,26 @@
+http.get./auth/me:
+  fn: auth.getme
+  authn: true
+  responses:
+    200:
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              success:
+                type: boolean
+              message:
+                type: string
+              user:
+                type: object
+    401:
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              success:
+                type: boolean
+              message:
+                type: string

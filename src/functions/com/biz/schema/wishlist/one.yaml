@@ -1,7 +1,0 @@
-summary: Fetch WishList
-tasks:
-  - id: schema_wishlist_one
-    fn: datasource.schema.WishList.findUnique
-    args:
-      where:
-        id: <% parseInt(inputs.params.id) %>

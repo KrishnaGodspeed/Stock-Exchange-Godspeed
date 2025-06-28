@@ -1,0 +1,42 @@
+http.post./wishlist/save:
+  fn: wishlist.save
+  authn: true
+  body:
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            name:
+              type: string
+              description: Name for the wishlist item
+            options:
+              type: object
+              description: API options object (function, symbol, interval, etc.)
+          required:
+            - name
+            - options
+
+  responses:
+    201:
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              success:
+                type: boolean
+              message:
+                type: string
+              wishlistItem:
+                type: object
+    400:
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              success:
+                type: boolean
+              message:
+                type: string

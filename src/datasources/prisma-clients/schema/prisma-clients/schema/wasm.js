@@ -128,27 +128,21 @@ exports.Prisma.UserScalarFieldEnum = {
   password: 'password'
 };
 
-exports.Prisma.IntradayScalarFieldEnum = {
-  id: 'id',
-  function: 'function',
-  symbol: 'symbol',
-  interval: 'interval',
-  adjusted: 'adjusted',
-  extended_hours: 'extended_hours',
-  month: 'month',
-  outputsize: 'outputsize',
-  datatype: 'datatype'
-};
-
 exports.Prisma.WishListScalarFieldEnum = {
   id: 'id',
-  UserId: 'UserId',
-  optionsId: 'optionsId'
+  createdAt: 'createdAt',
+  name: 'name',
+  userId: 'userId',
+  options: 'options'
 };
 
 exports.Prisma.SortOrder = {
   asc: 'asc',
   desc: 'desc'
+};
+
+exports.Prisma.JsonNullValueInput = {
+  JsonNull: Prisma.JsonNull
 };
 
 exports.Prisma.QueryMode = {
@@ -161,10 +155,15 @@ exports.Prisma.NullsOrder = {
   last: 'last'
 };
 
+exports.Prisma.JsonNullValueFilter = {
+  DbNull: Prisma.DbNull,
+  JsonNull: Prisma.JsonNull,
+  AnyNull: Prisma.AnyNull
+};
+
 
 exports.Prisma.ModelName = {
   User: 'User',
-  Intraday: 'Intraday',
   WishList: 'WishList'
 };
 

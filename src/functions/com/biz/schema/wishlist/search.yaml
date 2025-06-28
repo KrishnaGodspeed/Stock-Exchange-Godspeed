@@ -1,5 +1,0 @@
-summary: Fetch many WishList
-tasks:
-  - id: schema_wishlist_search
-    fn: datasource.schema.WishList.findMany
-    args: {}

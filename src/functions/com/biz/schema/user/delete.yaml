@@ -1,7 +1,0 @@
-summary: Delete User
-tasks:
-  - id: schema_user_delete
-    fn: datasource.schema.User.delete
-    args:
-      where:
-        id: <% parseInt(inputs.params.id) %>

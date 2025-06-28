@@ -151,7 +151,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "E:\\Visual code\\Web\\GodSpeed\\stock-exchange-v2\\src\\datasources\\prisma-clients\\schema\\prisma-clients\\schema\\prisma-clients\\schema",
+      "value": "/home/abhijeet/Projects/work/Stock-Exchange-Godspeed/src/datasources/prisma-clients/schema/prisma-clients/schema/prisma-clients/schema",
       "fromEnvVar": null
     },
     "config": {
@@ -160,14 +160,14 @@ const config = {
     "binaryTargets": [
       {
         "fromEnvVar": null,
-        "value": "windows",
+        "value": "debian-openssl-3.0.x",
         "native": true
       }
     ],
     "previewFeatures": [
       "metrics"
     ],
-    "sourceFilePath": "E:\\Visual code\\Web\\GodSpeed\\stock-exchange-v2\\src\\datasources\\prisma-clients\\schema\\prisma-clients\\schema\\schema.prisma",
+    "sourceFilePath": "/home/abhijeet/Projects/work/Stock-Exchange-Godspeed/src/datasources/prisma-clients/schema/prisma-clients/schema/schema.prisma",
     "isCustomOutput": true
   },
   "relativeEnvPaths": {
@@ -181,6 +181,7 @@ const config = {
     "db"
   ],
   "activeProvider": "postgresql",
+  "postinstall": false,
   "inlineDatasources": {
     "db": {
       "url": {
@@ -229,8 +230,8 @@ exports.PrismaClient = PrismaClient
 Object.assign(exports, Prisma)
 
 // file annotations for bundling tools to include these files
-path.join(__dirname, "query_engine-windows.dll.node");
-path.join(process.cwd(), "src/datasources/prisma-clients/schema/prisma-clients/schema/prisma-clients/schema/query_engine-windows.dll.node")
+path.join(__dirname, "libquery_engine-debian-openssl-3.0.x.so.node");
+path.join(process.cwd(), "src/datasources/prisma-clients/schema/prisma-clients/schema/prisma-clients/schema/libquery_engine-debian-openssl-3.0.x.so.node")
 // file annotations for bundling tools to include these files
 path.join(__dirname, "schema.prisma");
 path.join(process.cwd(), "src/datasources/prisma-clients/schema/prisma-clients/schema/prisma-clients/schema/schema.prisma")

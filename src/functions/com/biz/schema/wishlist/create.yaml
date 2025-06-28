@@ -1,7 +1,0 @@
-id: create_wishlist_workflow
-summary: Create WishList
-tasks:
-  - id: schema_wishlist_create
-    fn: datasource.schema.WishList.create
-    args:
-      data: <% inputs.body %>

@@ -1,7 +1,0 @@
-summary: Fetch User
-tasks:
-  - id: schema_user_one
-    fn: datasource.schema.User.findUnique
-    args:
-      where:
-        id: <% parseInt(inputs.params.id) %>

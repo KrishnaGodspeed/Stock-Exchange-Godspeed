@@ -1,8 +1,0 @@
-summary: Update Intraday
-tasks:
-  - id: schema_intraday_update
-    fn: datasource.schema.Intraday.update
-    args:
-      where:
-        id: <% parseInt(inputs.params.id) %>
-      data: <% inputs.body %>

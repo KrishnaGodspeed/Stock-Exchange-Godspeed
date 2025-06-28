@@ -1,7 +1,0 @@
-summary: Delete WishList
-tasks:
-  - id: schema_wishlist_delete
-    fn: datasource.schema.WishList.delete
-    args:
-      where:
-        id: <% parseInt(inputs.params.id) %>

@@ -1,6 +1,0 @@
-summary: Create Intraday
-tasks:
-  - id: schema_intraday_create
-    fn: datasource.schema.Intraday.create
-    args:
-      data: <% inputs.body %>
