@@ -1,4 +1,5 @@
 import {
+  GSStatus,
   GSContext,
   GSDataSource,
   logger,
@@ -48,13 +49,21 @@ export default async function (ctx: GSContext) {
   //   });
   // }
 
+  const  url = `/query?${stringified_query}apikey=${ctx.config.stockexchange.ALPHA_VANTAGE_API_KEY}`;
   const res = await client.execute(ctx, {
     meta: {
       method: 'get',
-      url: `/query?${stringified_query}apikey=${ctx.config.stockexchange.ALPHA_VANTAGE_API_KEY}`,
+      // url: `/query?${stringified_query}apikey=${ctx.config.stockexchange.ALPHA_VANTAGE_API_KEY}`,
+      url
     },
   });
 
-  logger.info('Response for intraday data:', res);
-  return res;
+  console.log('UUUUUUUUUURRRRRRRRRRRRLLLLLLLLLLLLLL:', url);
+  
+  
+
+  // logger.info('Response for intraday data:', stockData);
+
+  // return new GSStatus(true, 200, undefined, {success: true, status:200, stockData: res, message: "fetched data successfully"})
+  return new GSStatus(true, 200, undefined, res);
 }
