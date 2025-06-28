@@ -56,11 +56,7 @@ export default async function (ctx: GSContext) {
       // url: `/query?${stringified_query}apikey=${ctx.config.stockexchange.ALPHA_VANTAGE_API_KEY}`,
       url
     },
-  });
-
-  console.log('UUUUUUUUUURRRRRRRRRRRRLLLLLLLLLLLLLL:', url);
-  
-  
+  }); 
 
   // logger.info('Response for intraday data:', stockData);
 
