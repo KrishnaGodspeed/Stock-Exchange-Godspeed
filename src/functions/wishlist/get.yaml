@@ -1,0 +1,7 @@
+summary: Fetch Wishlist Items by User ID
+tasks:
+  - id: get_user_wishlist
+    fn: datasource.schema.WishList.findMany
+    args:
+      where:
+        userId: <% inputs.query.userId %>

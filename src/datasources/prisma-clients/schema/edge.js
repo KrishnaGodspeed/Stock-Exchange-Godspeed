@@ -149,7 +149,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "/home/abhijeet/Projects/work/Stock-Exchange-Godspeed/src/datasources/prisma-clients/schema",
+      "value": "E:\\godspeed BSE\\Stock-Exchange-Godspeed\\src\\datasources\\prisma-clients\\schema",
       "fromEnvVar": null
     },
     "config": {
@@ -158,14 +158,14 @@ const config = {
     "binaryTargets": [
       {
         "fromEnvVar": null,
-        "value": "debian-openssl-3.0.x",
+        "value": "windows",
         "native": true
       }
     ],
     "previewFeatures": [
       "metrics"
     ],
-    "sourceFilePath": "/home/abhijeet/Projects/work/Stock-Exchange-Godspeed/src/datasources/schema.prisma",
+    "sourceFilePath": "E:\\godspeed BSE\\Stock-Exchange-Godspeed\\src\\datasources\\schema.prisma",
     "isCustomOutput": true
   },
   "relativeEnvPaths": {
@@ -179,6 +179,7 @@ const config = {
     "db"
   ],
   "activeProvider": "postgresql",
+  "postinstall": false,
   "inlineDatasources": {
     "db": {
       "url": {

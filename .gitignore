@@ -3,4 +3,4 @@ dist/*
 package-lock.json
 .env
 ./.env
-src/datasources/prisma-clients/*
+src/datasources/prisma-clients

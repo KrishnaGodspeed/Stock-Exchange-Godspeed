@@ -1,0 +1,16 @@
+http.get./wishlist:
+  fn: wishlist.search
+  authn: true
+  responses:
+    200:
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              success:
+                type: boolean
+              message:
+                type: string
+              wishlist:
+                type: array
